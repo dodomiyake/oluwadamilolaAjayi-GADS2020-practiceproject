@@ -14,23 +14,23 @@ In this lab, you learn how to perform the following tasks:
 
    1.   View the subnets:
 
-        gcloud compute networks subnets list
+            gcloud compute networks subnets list
 
    2.   View the routes:
 
-        gcloud compute routes list
+            gcloud compute routes list
 
    3.   View the firewall rules:
 
-        gcloud compute firewall-rules list
+            gcloud compute firewall-rules list
 
    4.   Delete the default network:
 
-        gcloud compute networks delete default
+            gcloud compute networks delete default
 
    5. Try to create a VM instance:
 
-        gcloud compute instances create myvm-1
+            gcloud compute instances create myvm-1
 
 
 
@@ -38,7 +38,7 @@ In this lab, you learn how to perform the following tasks:
 
    1.  Create an auto mode VPC network with Firewall rules:
 
-        gcloud compute networks create mynetwork --subnet-mode=auto --bgp-routing-mode=regional
+            gcloud compute networks create mynetwork --subnet-mode=auto --bgp-routing-mode=regional
 
         firewall rules:
 
@@ -53,11 +53,11 @@ In this lab, you learn how to perform the following tasks:
 
    2. Create a VM instance in us-central1:
 
-        gcloud compute instances create mynet-us-vm --zone=us-central1-c --machine-type=n1-standard-1 --subnet=mynetwork
+            gcloud compute instances create mynet-us-vm --zone=us-central1-c --machine-type=n1-standard-1 --subnet=mynetwork
 
    3.  Create a VM instance in europe-west1:
 
-        gcloud compute instances create mynet-eu-vm --zone=europe-west1-c --machine-type=n1-standard-1 --subnet=mynetwork
+            gcloud compute instances create mynet-eu-vm --zone=europe-west1-c --machine-type=n1-standard-1 --subnet=mynetwork
 
 
 
