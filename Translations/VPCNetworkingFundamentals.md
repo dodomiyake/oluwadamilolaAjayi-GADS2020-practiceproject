@@ -12,23 +12,23 @@ In this lab, you learn how to perform the following tasks:
 
 1.  Explore the default network:
 
-   1.   View the subnets
+   1.   View the subnets:
 
         gcloud compute networks subnets list
 
-   2.   View the routes
+   2.   View the routes:
 
         gcloud compute routes list
 
-   3.   View the firewall rules
+   3.   View the firewall rules:
 
         gcloud compute firewall-rules list
 
-   4.   Delete the default network
+   4.   Delete the default network:
 
         gcloud compute networks delete default
 
-   5. Try to create a VM instance
+   5. Try to create a VM instance:
 
         gcloud compute instances create myvm-1
 
@@ -36,11 +36,12 @@ In this lab, you learn how to perform the following tasks:
 
 2. Create a VPC network and VM instances:
 
-   1.  Create an auto mode VPC network with Firewall rules
+   1.  Create an auto mode VPC network with Firewall rules:
 
         gcloud compute networks create mynetwork --subnet-mode=auto --bgp-routing-mode=regional
 
         firewall rules:
+
             gcloud compute firewall-rules create mynetwork-allow-icmp --direction=INGRESS --network=mynetwork --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=icmp
 
             gcloud compute firewall-rules create mynetwork-allow-internal --direction=INGRESS --network=mynetwork --priority=65534 --source-ranges=10.128.0.0/9 --action=ALLOW --rules=all
